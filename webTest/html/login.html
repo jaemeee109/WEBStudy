@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  
+  <!-- 상단 헤더  -->
+	<head>
+	<meta charset="UTF-8">
+	<title> 춘식이네 </title>
+	<link rel="stylesheet" href="../css/index.css">
+	<div id= "header">
+	<div id = "container">
+	<h1> 춘식이네 </h1>
+	<h4> coffe & Desert</h4>
+	</div>
+	</head>
+	
+<body>
+	<!-- 네비게이션 바 -->
+	<nav>
+	<!-- 왼쪽메뉴 -->
+	<div class="container">
+	<ul class="leftMenu">
+	<li class="active"><a href="index.html"> 홈 </a></li>
+	
+	<li class="dropBox">
+	<a href="info.html"> 춘식이네란? </a>
+		<span class="dropmenu">
+		<span><a href="#">소개</a></span>
+		<span><a href="#">오시는길</a></span>
+		</span>
+		</li>
+		
+		
+		<li class="dropBox">
+		<a href="menu.html"> 메뉴 </a>
+		<span class="dropmenu">
+		<span><a href="#">Coffe</a></span>
+		<span><a href="#">Bread</a></span>
+		<span><a href="#">Desert</a></span>
+		</span>
+		</li>
+		
+		<li class="dropBox">
+		<a href="board.html"> 게시판</a>
+		<span class="dropmenu">
+		<span><a href="#">공지사항</a></span>
+		<span><a href="#">직원전용</a></span>
+		<span><a href="#">채용공고</a></span>
+		</span>
+		</li>
+		
+		<li class="dropBox">
+		<a href="store.html"> 스토어 </a>
+		<span class="dropmenu">
+		<span><a href="#">MD</a></span>
+		<span><a href="#">Bread</a></span>
+		<span><a href="#">Desert</a></span>
+		</span>
+		</li>
+		
+		<li class="dropBox">
+		<a href="faq.html"> 고객지원 </a>
+		<span class="dropmenu">
+		<span><a href="#">FAQ</a></span>
+		<span><a href="#">문의게시판</a></span>
+		</span>
+		</li>
+	</ul>
+	
+	<!-- 오른쪽 메뉴 -->
+	
+	<ul class ="rightMenu">
+	<li><a href="join.html">회원가입</a></li>
+	<li><a href="login.html">로그인</a></li>
+	</ul>
+	
+	</div>
+	</nav>
+	
+			<!-- 레이아웃 섹션 1에 로그인 삽입  -->
+			<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>LOGIN</title>
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+  <!-- 로그인 화면 -->
+  <section id="section2">
+    <div class="container">
+
+      <!-- 로그인+소셜 박스 -->
+      <div class="loginBox">
+        <!-- 로그인 섹션 -->
+        <div class="box login">
+          <div class="logo">
+            <h1>로그인</h1>
+          </div>
+          <form onsubmit="return false;">
+          <!-- <form action="login" method="post"> -->
+           <input type="text" id="id" name="id" placeholder="아이디">
+		<input type="password" id="pw" name="pw" placeholder="비밀번호">
+             <button type="button" onclick="login()">로그인</button>
+          <!--   <button type="submit">로그인</button> -->
+          </form>
+          <div id="confirm" style="margin-top:10px; font-weight:bold;"></div>
+        </div>
+
+        <!-- 소셜로그인 섹션 -->
+        <div class="box social">
+          <div class="logo">
+            <h1>SOCIAL LOGIN</h1>
+          </div>
+          <button class="kakaotalk">카카오톡 ID로 로그인</button>
+          <button class="facebook">페이스북 ID로 로그인</button>
+          <button class="twitter">트위터 ID로 로그인</button>
+          <button class="naver">네이버 ID로 로그인</button>
+           
+        </div>
+
+        <div class="clear"></div>
+      </div> <!-- loginBox 끝 -->
+
+      <!-- id/pw 찾기 섹션 (밖으로 뺌) -->
+      <div class="alert">
+        <h3>도움이 필요하신가요?</h3>
+        <p>
+          <button>아이디 찾기</button>
+          <button>비밀번호 찾기</button>
+        </p>
+      </div>
+
+    </div>
+  </section>
+</html>
+			
+			<!-- 그래프 -->
+			<div class ="graph1">
+			</div>
+			<div class ="graph2">
+			</div>
+			</div>
+			<!-- 이미지 -->
+			<div class ="rightBox">
+			<div class = "imgBox">
+			</div>
+			<!-- 테이블 -->
+			<div class ="table">
+			</div>
+			</div>
+			</section>
+	<div class="clear"></div>
+	
+	<!-- 하단바  -->
+	<footer>
+	<div class = "top">
+	<div class = "container">
+	<span>다운로드</span>
+	<span>개인정보처리방침</span>
+	<span>저작권지침및신고</span>
+	<span>이메일무단수집거부</span>
+	</div>
+	</div>
+	
+	<div class = "container">
+	<strong>
+	Home : Location Log : Tag Log : Midea Log : Guest Book
+	Admin : New Post
+	</strong>
+	<div class = "copyright">
+	 COPYRIGHT &copy: 춘식이네
+	 BLOG IS POWERED BY CHUNSIK / DESIGNED BY KIMCHUNSIK 
+	 </div>
+	</div>
+	</footer>
+	
+	<!-- 로그인 검증 js코드 -->
+	<script src="../js/login.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+@charset "UTF-8";
+/* 로그인 화면 스타일 설정 */
+
+
+#section2{
+	height: 520px;
+}
+#section2 > .container > .loginBox{
+	width: 100%;
+	height: 320px;
+	background: #fafafa;
+	border: none;
+	overflow: hidden;
+	position: relative;
+	
+}
+
+#section2 .loginBox > div.box{
+	width: 50%;
+	height: 100%;
+	float: left;
+	padding: 30px 30px;
+	box-sizing: border-box;
+	border-right: 1px solid #cbcbcb;
+	
+	
+}
+#section2 .loginBox > div.box:last-of-type{
+	border-right: none;
+}
+#section2 .loginBox .alert{
+	width: 100%;
+	height: auto;
+	padding: 20px 30px;
+	border: none;
+	clear: both;
+	box-sizing: border-box;
+	border-top: 1px solid #cbcbcb;
+	background: white;
+	margin-top: 0;
+	position: absolute;
+	bottom: - 180px;
+	left: 0;
+}
+#section2 .loginBox .box .logo{
+	height: 55px;
+	border-bottom: 2px solid #f36181;
+	margin-bottom: 20px;
+}
+#section2 .loginBox .box form{
+	margin-top: 20px;
+}
+#section2 .loginBox .box input{
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+	padding-left: 10px;
+	box-sizing: border-box;
+	text-align:left;
+}
+#section2 .loginBox button{
+	width: 100%;
+	height: 40px;
+	background:#f36181;
+	color: white;
+	border: 0;
+	font-size: 16px;
+	outline: 0;
+	cursor: pointer;
+}
+#section2 .loginBox .box form > button{
+	margin-top: 30px;
+}
+
+#section2 .social > button {
+	width: 100%;
+	height:  35px;
+	margin-top: 10px;
+	color: white;
+	border: none;
+	cursor: pointer;
+	float: none;
+	font-size: 15px;
+}
+#section2 .social > button.kakaotalk{
+	background: #ece939;
+	margin-top: 7px;
+}
+#section2 .social > button.facebook{
+	background: #3b5999;
+}
+#section2 .social > button.twitter{
+	background: #1da1f3;
+}
+#section2 .social > button.naver{
+	background: #00bd39;
+}
+#section2 .alert{
+	padding: 20px 30px;
+	font-size: 12px;
+	color:#f36181;
+}
+#section2 .alert button{
+	width: calc(50% - 10px);
+	margin-top: 15px;
+	float: left;
+	background: white;
+	color: #f36181;
+	border: 1px solid #f36181;
+}
+#section2 .alert button:nth-child(1){
+	margin-right: 10px;
+}
+#section2 .alert button:last-child{
+	margin-left: 10px;
+}
+#section2 .alert button:hover{
+	color: white;
+	background: #00bd39;
+}
