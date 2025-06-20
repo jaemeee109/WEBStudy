@@ -4,17 +4,15 @@
   <!-- 상단 헤더  -->
 	<head>
 	<meta charset="UTF-8">
-	<title> 춘식이네 로그인 </title>
+	<title> 춘식이네 </title>
 	<link rel="stylesheet" href="../css/index.css">
-	
-	
 	<div id= "header">
 	<div id = "container">
-	<h1> 춘식이네 </h1>
-	
+	<h1 class="black-han-sans-regular">춘식이네</h1>
 	<h4> coffe & Desert</h4>
+	</div>
 	
-		<!-- h1폰트코드  -->
+	<!-- h1폰트코드  -->
 	<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" 
 	rel="stylesheet"> 
 	
@@ -23,10 +21,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 	
-	
-	
-	
-	</div>
 	</head>
 	
 <body>
@@ -35,7 +29,7 @@
 	<!-- 왼쪽메뉴 -->
 	<div class="container">
 	<ul class="leftMenu">
-	<li class="active"><a href="../html/Index.html"> 홈 </a></li>
+	<li class="active"><a href="../html/memberIndex.html"> 홈 </a></li>
 	
 	<li class="dropBox">
 	<a href="info.html"> 춘식이네란? </a>
@@ -85,84 +79,106 @@
 	<!-- 오른쪽 메뉴 -->
 	
 	<ul class ="rightMenu">
-	<li><a href="join.html">회원가입</a></li>
-	<li><a href="login.html">로그인</a></li>
+	<li><a href="update.html">회원수정</a></li>
+	<li><a href="#" id="logoutBtn">로그아웃</a></li>
 	</ul>
 	
 	</div>
 	</nav>
 	
-			<!-- 레이아웃 섹션 1에 로그인 삽입  -->
-			<!DOCTYPE html>
+			<!-- 레이아웃 섹션 1에 qna.html 삽입 -->
+		<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>LOGIN</title>
-  <link rel="stylesheet" href="../css/login.css">
- 
-  
+<meta charset="UTF-8">
+<title>춘식이네 문의게시판</title>
+<link rel="stylesheet" href="../css/qna.css">
 </head>
-  <!-- 로그인 화면 -->
-  <section id="section2">
-    <div class="container">
+<body>
 
-      <!-- 로그인+소셜 박스 -->
-      <div class="loginBox">
-        <!-- 로그인 섹션 -->
-        <div class="box login">
-          <div class="logo">
-            <h2>Login</h2>
-          </div>
-          <form onsubmit="return false;">
-          <!-- <form action="login" method="post"> -->
-           <input type="text" id="id" name="id" placeholder="아이디">
-		<input type="password" id="pw" name="pw" placeholder="비밀번호">
-             <button type="button" onclick="login()">로그인</button>
-         
-          </form>
-          <div id="confirm" style="margin-top:10px; font-weight:bold;"></div>
-        </div>
+	<!-- 주의사항 -->
+	<div class="pad"> <p>◇　문의사항은 1:1 로만 접수 됩니다</p>
+					<p>◇　답변은 업무일 기준 3~5일 소요 됩니다</p>
+					<p>◇　답변을 원하시는 연락 수단을 하단에서 선택해주세요 </p></div>
 
-        <!-- 소셜로그인 섹션 -->
-        <div class="box social">
-          <div class="logo">
-            <h2>Social Login</h2>
-          </div>
-          <button class="kakaotalk">카카오톡 ID로 로그인</button>
-          <button class="facebook">페이스북 ID로 로그인</button>
-          <button class="twitter">트위터 ID로 로그인</button>
-          <button class="naver">네이버 ID로 로그인</button>
-           
-        </div>
+	<!-- 문의 옵션 선택  -->
+	
+			
+	<form>
+		<table border="0">
+			<tr> <td> 카테고리 </td>
+			<td>
+					<select>
+					<option> 상품문의 </option>
+					<option> 주문및결제</option>	
+					<option> 환불문의 </option>
+					<option> 배송문의 </option>
+					<option> 서비스 </option>
+					<option> 기타 </option>
+					</select>
+			</td>
+	
+	<!-- 문의 사항 입력 -->
+			<tr>
+			<td> 문의사항 </td>
+			<td>
+				<textarea rows="7" cols="30" name="exam"></textarea>
+			</td>
+			</tr>
+			
+	<!-- 첨부 파일 -->
+			<tr>
+			<tr>
+			<td><label for="photo">첨부파일</label></td>
+			<td><input type="file" accept="image/jpg, image/gif" id="phone"></td>
+			</tr>
+		</table>
+		
+			<!-- 답변받을곳  -->
+			<tr>
+			<td>
+			
+			<label>
+		  <input type="checkbox" name="contact" value="sms"> 문자 </label>
+			<label>
+		  <input type="checkbox" name="contact" value="kakao"> 카카오톡	</label>
+			<label>
+		  <input type="checkbox" name="contact" value="email"> 이메일</label>
+			</td>
+			</tr>
+		
+			</form>
+		
+	<!-- 전송 -->
+			<!-- 전송 -->
+			<input type="button" value="접수" onclick="qna()" class="button">
+			<input type="button" value="취소" onclick="cancleqna()" class="button">
 
-        <div class="clear"></div>
-      </div> <!-- loginBox 끝 -->
+			
 
-    
-      <div class="alert">
-        <h3>도움이 필요하신가요?</h3>
-        <p>
-          <button>아이디 찾기</button>
-          <button>비밀번호 찾기</button>
-        </p>
-      </div>
-
-    </div>
-  </section>
+			
+			
+	
+		
+		
+		
+</body>
 </html>
+			  
+			  </div>
+			  </div>
 			
 			<!-- 그래프 -->
-			<div class ="graph1">
-			</div>
-			<div class ="graph2">
-			</div>
-			</div>
+			<div class ="graph1"></div>
+			<div class ="graph2"></div>
+			
 			<!-- 이미지 -->
 			<div class ="rightBox">
 			<div class = "imgBox">
+			 
 			</div>
 			<!-- 테이블 -->
-			<div class ="table">
+			<div class ="table"></div>
 			</div>
 			</div>
 			</section>
@@ -190,9 +206,7 @@
 	 </div>
 	</div>
 	</footer>
-	
-	<!-- 로그인 검증 js코드 -->
-	<script src="../js/login.js"></script>
-
 </body>
+<script src="../js/qna.js"></script>
+
 </html>

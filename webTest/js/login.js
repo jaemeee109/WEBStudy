@@ -1,14 +1,20 @@
- 
-  var emp = {"id" : "kcs", "pw" : "5555", "name" : "김춘식"};
-  function login(){
-    var a = document.getElementById("id").value;
-    var b = document.getElementById("pw").value;
-    if (emp.id == a && emp.pw == b){
-      if(emp.id == a && emp.pw == b){
-        alert(emp.name + "님 환영합니다!");  // 팝업 띄우기
-        window.location.href = "index.html";  // 홈 화면으로 이동 (경로는 맞게 수정)
-    } else {
-        alert("아이디 또는 비밀번호가 틀립니다.");
-    }
-}
+function login() {
+  var inputId = document.getElementById("id").value.trim();
+  var inputPw = document.getElementById("pw").value.trim();
+
+  var storedUser = localStorage.getItem('user');
+  if (!storedUser) {
+    alert("등록된 회원이 없습니다. 회원가입을 먼저 해주세요.");
+    return;
+  }
+
+  var user = JSON.parse(storedUser);
+
+  if (user.id === inputId && user.pw === inputPw) {
+    alert(user.name + "님 환영합니다!");
+    localStorage.setItem('isLogin', 'true'); // 로그인 상태 저장
+    window.location.href = "../html/memberIndex.html";
+  } else {
+    alert("아이디 또는 비밀번호가 틀립니다.");
+  }
 }
