@@ -19,6 +19,13 @@ public class Book implements Serializable{
 	private String releaseDate; // 출판일
 	private String condition; // 신제품 or 구제품 or 리퍼브제품
 	
+	
+	// 기본생성자
+	public Book() {
+	 
+	}
+	
+	
 	// 생성자
 	public Book(String bookId, String name, Integer unitPrice) {
 		

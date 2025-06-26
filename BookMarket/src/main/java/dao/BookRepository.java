@@ -6,8 +6,29 @@ import dto.Book;
 public class BookRepository {
 
 	private ArrayList<Book> listOfBooks= new ArrayList<Book>();
+	private static BookRepository instance = new BookRepository();
 	
-	public BookRepository() {
+		
+	
+		
+		public Book getBookById(String bookId) {
+			// 도서 목록에서 일치하는 도서 호출
+			
+			Book bookById=null;
+			
+			for (int i=0; i <listOfBooks.size(); i++) {
+				Book book = listOfBooks.get(i);
+				if (book != null && book.getBookId()!=null &&
+						book.getBookId().equals(bookId)) {
+					bookById=book;
+					break;
+				}//if종료
+					
+			}//for종료
+			return bookById;
+		} // Book getBookById 메서드 종료
+		
+		public BookRepository() {
 		
 		Book book1 = new Book ("ISBN9791196254865","원더",15300);
 		book1.setAuthor("R.J.팔라시오");
@@ -42,5 +63,13 @@ public class BookRepository {
 	public ArrayList<Book> getAllBooks(){
 		// 도서 목록을 가져오는 메서드
 		return listOfBooks;
+	}
+	
+	public static BookRepository getInstance() {
+		return instance;
+	}
+	
+	public void addBook(Book book) {
+		listOfBooks.add(book);
 	}
 }
