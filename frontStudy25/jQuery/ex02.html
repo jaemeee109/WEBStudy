@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> EVENT </title>
+
+	<script>
+	window.onload = function (){
+		//문서 객체를 연결
+		var input_1 = document.querySelectorAll('input')[0];
+		var input_1 = document.querySelectorAll('input')[1];
+		
+		// input_1
+		
+		input_1.onkeydown = function () {
+			//글자 수가 6개 이상일때
+			if (6 <= input_1.value.length) {
+				// input_2 문서 객체로 포커스 이동
+				input_2.focus();
+			}
+		};
+		
+		// input_2 
+		input_2.onkeydown = function (envent){
+			var event = event || window.event;
+			
+			if (event.keyCode == && input_2.value.length == 0){
+				input_1.focus();
+			}
+		};
+		
+	};
+	</script>
+
+</head>
+<body>
+		<input type ="text" maxlength ="6">
+		<span>-</span>
+		<input type = "text" maxlength="7">
+
+</body>
+</html>

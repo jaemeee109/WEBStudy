@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>연습2</title>
+</head>
+<body></body>
+
+
+<!-- 브라우저 객체모델 BOM  -->
+<!-- window 객체를 이용하여 창 이동 -->
+<script>
+	window.onload=function(){
+		var win=window.open('ex03-31(win).html','','width=300,height=200');
+		win.moveTo(100,100);
+		
+		window.setInterval(function(){
+			win.moveBy(20,20);
+		},1000);
+		
+		window.setTimeout(function(){
+			win.close();
+		},5000);
+	}
+</script>

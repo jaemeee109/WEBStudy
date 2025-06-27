@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> location.reload() 사용 </title>
+</head>
+<body>
+</body>
+<script>	
+	var t = new Date();
+	document.write(t.getHours()+":"+t.getMinutes()+":"+getSeconds());
+	setInterval(function(){
+		location.reload();
+	},1000);
+</script>
+</html>
+

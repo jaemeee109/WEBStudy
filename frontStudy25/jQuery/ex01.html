@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery 스타일 & 글자 조작 </title>
+<script src="https://code.jquery.com/jquery-3.7.1.js" 
+integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+crossorigin="anonymous"></script>
+
+<!-- 도형 스타일 조작  -->
+<script>
+	$(document).ready(function() {
+		$('.box').css('float','left');
+		$('.box').css('margin',10);
+		$('.box').css('width',100);
+		$('.box').css('height',100);
+		$('.box').css('backgroundColor','orange');
+	});
+</script>
+
+<!-- 글자 스타일 조작 -->
+<script>
+	$(document).ready(function(){
+		//내부 글자를 변경합니다
+		$('h1:nth-child(1)').text('<a href="#">text()</a>');
+		$('h1:nth-child(2)').html('<a href="#">html()</a>');
+	});
+</script>
+</head>
+<body>
+
+
+	
+	
+	<!-- 글자 스타일  -->
+	<h1> Header - 0 </h1>
+	<h1> Header - 1 </h1>
+	
+	<!-- 도형 스타일  -->
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	
+	
+</body>
+</html>

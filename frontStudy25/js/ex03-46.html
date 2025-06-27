@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON 배열</title>
+</head>
+<script>
+	function init(){
+		var emp = [{"name" : "Byun", "age" : 33},
+					{"name" : "Jeon", "age" : 27},
+					{"name" : "Kim", "age" : 29}];
+		var msg="";
+		msg += "이름: " +emp[0].name + "<br>나이: " + emp[0].age+"<br><br>";
+		msg += "이름: " +emp[1].name + "<br>나이: " + emp[1].age+"<br><br>";
+		msg += "이름: " +emp[2].name + "<br>나이: " + emp[2].age+"<br><br>";
+		document.getElementById("result").innerHTML=msg;
+	}
+</script>
+<body onload="init()">
+	<h2> JSON 표기법</h2>
+	<div id="result"></div>	
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON stringify와 parse</title>
+</head>
+<script>
+	user= { name: 'admin',
+			email: 'bamebooks@naver.com',
+			phone: '010-0901-1997'
+			};
+	alert(user);
+	userStr = JSON.stringify(user);
+	alert(userStr);
+	JSON.parse(userStr, function(key,value){
+		alert(key+""+value);
+	});
+</script>
+<body>
+
+</body>
+</html>

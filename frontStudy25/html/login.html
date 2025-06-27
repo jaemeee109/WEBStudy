@@ -1,0 +1,174 @@
+<!-- HOME 화면 만들기 -->
+<!-- 메인 화면 -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>페이지 제작</title>
+<link rel="stylesheet" href="main.css">
+</head>
+<body>
+<!-- header -->
+<header>
+<div class = "container">
+<div class= "logo"> <img src="../html/image/lucky.png"></div>
+<ul class="sidemenu">
+<li><a href="#">Home</a></li>
+<li><a href="#">Sitemap</a></li>
+
+</ul>
+</div>
+</header>
+<!-- nav -->
+<nav>
+<div class="container">
+<ul class="leftMenu">
+<li class = "active"><a href="main.html">Home</a></li>
+<li><a href="galary.html">갤러리</a></li>
+<li class="dropBOX">
+<a href="board.html"> 게시판 </a>
+<span class="dropmenu">
+<span><a href="#"> 자유게시판 </a> </span>
+<span><a href="#">문의게시판</a></span>
+<span><a href="#">건의게시판</a></span>
+</span>
+</li>
+<li class="dropBox">
+<a href="">멀티미디어</a>
+<span class="dropmenu">
+<span><a href="#">음악듣기</a></span>
+<span><a href="#"> 동영상보기</a></span>
+</span>
+</li>
+<li><a href="#"> 상품구매 </a></li>
+<li><a href="#"> 찾아오시는길 </a></li>
+</ul>
+<ul class = "rightMenu">
+<li><a href="join.html">회원가입</a></li>
+<li><a href="#" id="loginBtn">로그인</a></li>
+</ul>
+</div>
+</nav>
+<!-- 로그인 삽입 section -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>로그인</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+  <!-- 로그인 화면 -->
+  <section id="section2">
+    <div class="container">
+
+      <!-- 로그인+소셜 박스 -->
+      <div class="loginBox">
+        <!-- 로그인 섹션 -->
+        <div class="box login">
+          <div class="logo">
+            <h1>로그인</h1>
+          </div>
+          <form action="login" method="post">
+            <input type="text" name="uid" placeholder="아이디">
+            <input type="password" name="pw" placeholder="비밀번호">
+            <button type="submit">로그인</button>
+          </form>
+        </div>
+
+        <!-- 소셜로그인 섹션 -->
+        <div class="box social">
+          <div class="logo">
+            <h1>소셜 로그인하기</h1>
+          </div>
+          <button class="facebook">페이스북 ID로 로그인</button>
+          <button class="twitter">트위터 ID로 로그인</button>
+          <button class="naver">네이버 ID로 로그인</button>
+        </div>
+
+        <div class="clear"></div>
+      </div> <!-- loginBox 끝 -->
+
+      <!-- id/pw 찾기 섹션 (밖으로 뺌) -->
+      <div class="alert">
+        <h1>도움이 필요하신가요?</h1>
+        <p>
+          <button>아이디 찾기</button>
+          <button>비밀번호 찾기</button>
+        </p>
+      </div>
+
+    </div>
+  </section>
+</html>
+
+
+<div class = "leftBox">
+<div class = "graph1">
+<!-- 그래프 1 추가 -->
+</div>
+<div class = "graph2">
+<!-- 그래프 2 추가 -->
+</div>
+</div>
+<div class = "rightBox">
+<div class = "imgBox">
+<!-- 이미지추가 -->
+</div>
+<div class= "table">
+<!-- 테이블 추가 -->
+</div>
+</div>
+</div>
+</section>
+<div class="clear"></div>
+<!-- footer-->
+<footer>
+<div class="top">
+<div class="container">
+<span> 다운로드 </span>
+<span> 개인정보처리방침</span>
+<span> 저작권지침및신고 </span>
+<span> 이메일 무단수집 거부 </span>
+</div>
+</div>
+<div class="container">
+<strong>
+Home : Location Log : Tag Log: Media Log : Guestbook : Admin : New Post
+</strong>
+<div class = "copyright">
+COPYIGHT &copy: 밤이북스
+BLOG IS POWERED BY DAUM / DESIGNED BY TISTORY
+</div>
+</div>
+</footer>
+
+
+<!-- <script src="login.js"></script> -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const loginBtn = document.getElementById("loginBtn");
+  const logincontainer = document.getElementById("logincontainer");
+
+  loginBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    fetch("test/login.html")
+      .then(res => {
+        if (!res.ok) throw new Error("로딩 실패: " + res.status);
+        return res.text();
+      })
+      .then(html => {
+        logincontainer.innerHTML = html;
+      })
+      .catch(err => {
+        logincontainer.innerHTML = "<p>로그인 화면 로딩 중 오류가 발생했습니다.</p>";
+        console.error(err);
+      });
+  });
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON 객체 생성</title>
+</head>
+<script>
+	function init(){
+		var emp = { "name" :"밤",
+					"age" : "5",
+					"tel" : "999-7777",
+					"address" : "서울"};
+		var msg="";
+		msg += "이름: " + emp.name + "<br>"
+			+ "나이: " + emp.age + "<br>"
+			+ "전화: " + emp.tel + "<br>"
+			+ "주소: " + emp.address + "<br>"
+		document.getElementById("result").innerHTML=msg;
+	}
+</script>
+<body onload = "init()">
+		<h2> JSON 표기법 </h2>
+		<div id="result"></div>
+</body>
+</html>
